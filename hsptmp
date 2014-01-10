@@ -1,0 +1,36 @@
+#packopt name "hikizan"
+
+
+screen 0,150,140
+*main
+	cls 0
+	randomize 
+	x = rnd(100)
+	y = rnd(100)
+	
+	pos 20,20
+	if x >= y{
+		mes str(x) + " - " + str(y)
+	}else{
+		mes str(y) + " - " + str(x)
+	}
+	mes " = " 
+	pos 60,40
+	
+	input z
+	button "Œˆ’è",*BŒˆ’è
+	
+stop
+
+*BŒˆ’è
+	cls 0
+	pos 20,20
+	if z == abs(x-y){
+		mes "³‰ğ"
+	}else{
+		mes "•s³‰ğ"
+	}
+	
+	button "Ÿ‚Ö",*main
+	
+stop
